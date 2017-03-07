@@ -4,11 +4,12 @@ from datetime import datetime
 
 from userAdmin.models import CnUser
 from shopAdmin.models import CnShop
+from orderAdmin.models import order
 
 
 # Create your models here.
 class dissension(models.Model):
-    order_id = models.ForeignKey(verbose_name="订单号")
+    order_id = models.ForeignKey(order,verbose_name="订单号")
     buyer = models.ForeignKey(CnUser, verbose_name="买家", null=False)
     seller = models.ForeignKey(CnShop, verbose_name="卖家", null=False)
     issue_time = models.DateField(default=datetime.now, verbose_name="纠纷时间")

@@ -1,6 +1,6 @@
 from django.db import models
 
-from orderAdmin.models import orders
+from orderAdmin.models import order
 from userAdmin.models import CnUser
 from shopAdmin.models import CnShop
 
@@ -8,7 +8,7 @@ from shopAdmin.models import CnShop
 # Create your models here.
 
 class orderDetail(models.Model):
-    order = models.ForeignKey(orders, verbose_name="订单号")
+    order = models.ForeignKey(order, verbose_name="订单号")
     user = models.ForeignKey(CnUser,verbose_name="买家")
     shop = models.ForeignKey(CnShop,verbose_name="卖家")
     item_id = models.CharField(max_length=15, verbose_name="商品id", null=False)

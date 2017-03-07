@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'userAdmin',
-    'shopAdmin'
+    'shopAdmin',
+    'dissensionAdmin',
+    'orderAdmin',
+    'orderDetailAdmin'
 ]
 
 AUTH_USER_MODEL = 'userAdmin.CnUser'
